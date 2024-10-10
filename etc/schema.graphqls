@@ -1,0 +1,8 @@
+type Query {
+    returnEligibilitySettings: ReturnEligibilitySettings @resolver(class: "SajidPatel\\ReturnEligibility\\Model\\Resolver\\ReturnEligibilitySettings")
+}
+
+type ReturnEligibilitySettings {
+    enable_display: Boolean
+    default_return_days: Int
+}

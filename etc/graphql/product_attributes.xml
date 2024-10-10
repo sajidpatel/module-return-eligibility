@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_CatalogGraphQl:etc/product_attributes.xsd">
+    <product_attributes>
+        <attribute name="eligible_for_return_days"/>
+    </product_attributes>
+</config>
