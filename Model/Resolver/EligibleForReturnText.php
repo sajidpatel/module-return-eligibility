@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\EligibleForReturn\Model\Resolver;
+namespace SajidPatel\ReturnEligibility\Model\Resolver;
 
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;

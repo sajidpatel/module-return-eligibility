@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\EligibleForReturn\Model\Product\Attribute\Backend;
+namespace SajidPatel\ReturnEligibility\Model\Product\Attribute\Backend;
 
 use Magento\Catalog\Model\Product;
 

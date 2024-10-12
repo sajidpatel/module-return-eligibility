@@ -46,14 +46,15 @@ class AddEligibleForReturnAttribute implements DataPatchInterface
                 'visible' => true,
                 'required' => false,
                 'user_defined' => true,
-                'default' => '', // Optionally set a default value
+                'default' => '30', // Optionally set a default value
                 'searchable' => false,
                 'filterable' => false,
                 'comparable' => false,
                 'visible_on_front' => true,
                 'used_in_product_listing' => true,
                 'unique' => false,
-                'apply_to' => ''
+                'apply_to' => '',
+                'group' => 'General',
             ]
         );
     }
