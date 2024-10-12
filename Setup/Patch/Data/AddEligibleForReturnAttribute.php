@@ -57,6 +57,19 @@ class AddEligibleForReturnAttribute implements DataPatchInterface
                 'group' => 'General',
             ]
         );
+
+        // Get all attribute sets
+        $attributeSets = $eavSetup->getAllAttributeSetIds(\Magento\Catalog\Model\Product::ENTITY);
+
+        // Add the attribute to all attribute sets
+        foreach ($attributeSets as $attributeSet) {
+            $eavSetup->addAttributeToSet(
+                \Magento\Catalog\Model\Product::ENTITY,
+                $attributeSet,
+                'General', // You can change this to any other group name
+                'eligible_for_return_days'
+            );
+        }
     }
 
     /**

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <return_eligibility>
+                <enabled>1</enabled>
+                <default_return_days>30</default_return_days>
+                <custom_message><![CDATA[within {days} days of delivery.]]></custom_message>
+            </return_eligibility>
+        </catalog>
+    </default>
+</config>

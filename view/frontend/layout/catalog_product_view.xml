@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block name="product.info.eligible_return"
+                   template="SajidPatel_ReturnEligibility::product/view/eligible_return.phtml"
+                   after="product.info.price">
+                <arguments>
+                    <argument name="eligible_return_view_model" xsi:type="object">SajidPatel\ReturnEligibility\ViewModel\EligibleReturn</argument>
+                    <argument name="current_product_view_model" xsi:type="object">SajidPatel\ReturnEligibility\ViewModel\CurrentProduct</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

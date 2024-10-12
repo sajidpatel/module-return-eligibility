@@ -1,0 +1,27 @@
+<?php
+/**
+ * Eligible for Return template
+ *
+ * @var \Magento\Catalog\Block\Product\View\Description $block
+ * @var \SajidPatel\EligibleReturn\ViewModel\EligibleReturn $eligibleReturnViewModel
+ * @var \YourVendor\YourModule\ViewModel\CurrentProduct $currentProductViewModel
+ */
+
+$eligibleReturnViewModel = $block->getData('eligible_return_view_model');
+$currentProductViewModel = $block->getData('current_product_view_model');
+if (!$eligibleReturnViewModel->isEnabled()) {
+    return;
+}
+
+?>
+<?php $product = $currentProductViewModel->getProduct(); ?>
+<?php $eligibleDays = $product->getData('eligible_for_return_days'); ?>
+
+<?php if ($eligibleReturnViewModel->isEnabled() && $eligibleDays > 0): ?>
+    <div class="product-info-eligible-return">
+        <span class="eligible-return-label"><?= $block->escapeHtml(__('Eligible for Return:')) ?></span>
+        <span class="eligible-return-value">
+            <?= $block->escapeHtml($eligibleReturnViewModel->getProcessedCustomMessage($eligibleDays)); ?>
+        </span>
+    </div>
+<?php endif; ?>

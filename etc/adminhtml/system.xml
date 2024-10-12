@@ -11,7 +11,7 @@
                 showInWebsite="1"
                 showInStore="1">
                 <label>Return Eligibility Settings</label>
-                <field id="enable_display"
+                <field id="enabled"
                     translate="label comment"
                     type="select"
                     sortOrder="10"
@@ -33,6 +33,17 @@
                     <label>Default Return Eligibility (Days)</label>
                     <comment>Specify the default number of days for return eligibility if not set on the product.</comment>
                     <validate>validate-digits</validate>
+                </field>
+                <field
+                    id="custom_message"
+                    translate="label comment"
+                    type="text"
+                    sortOrder="20"
+                    showInDefault="1"
+                    showInWebsite="1"
+                    showInStore="1">
+                    <label>Return Eligibility Message</label>
+                    <comment>Specify a placeholder {days} where the days are meant to show.</comment>
                 </field>
             </group>
         </section>
