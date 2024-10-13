@@ -17,6 +17,8 @@ class ReturnEligibilityText implements ResolverInterface
      */
     private $productRepository;
 
+    protected $eligibleReturnConfig;
+
     /**
      * @param ProductRepositoryInterface $productRepository
      */
@@ -68,6 +70,7 @@ class ReturnEligibilityText implements ResolverInterface
      */
     private function checkReturnEligibility($product)
     {
+
         // Implement your logic here
         // This is a placeholder implementation
         return true;

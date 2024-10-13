@@ -8,7 +8,7 @@ class ReturnEligibility extends \Magento\Eav\Model\Entity\Attribute\Backend\Abst
 {
     public function afterLoad($object)
     {
-        $returnEligibilityDays = $object->getData('return_eligibility_days');
+        $returnEligibilityDays = $object->getData('eligible_for_return_days');
         $showReturnEligibility = $object->getData('show_return_eligibility');
 
         if ($showReturnEligibility && $returnEligibilityDays > 0) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace SajidPatel\ReturnEligiblty\Api\Data;
+namespace SajidPatel\ReturnEligibility\Api\Data;
 
 interface ProductReturnEligibilityInterface
 {

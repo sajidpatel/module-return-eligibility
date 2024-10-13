@@ -1,5 +1,6 @@
 type Query {
     returnEligibilitySettings: ReturnEligibilitySettings @resolver(class: "SajidPatel\\ReturnEligibility\\Model\\Resolver\\ReturnEligibilitySettings")
+    eligibleForReturnText(product_sku: String!): String @resolver(class: "SajidPatel\\ReturnEligibility\\Model\\Resolver\\ReturnEligibilityText") @doc(description: "Get formatted return eligibility text for a product")
 }
 
 type ReturnEligibilitySettings {
@@ -9,8 +10,4 @@ type ReturnEligibilitySettings {
 
 interface ProductInterface {
     eligible_for_return_days: Int @doc(description: "Number of days the product is eligible for return. 0 means not eligible.")
-}
-
-type Query {
-    eligibleForReturnText(product_sku: String!): String @resolver(class: "SajidPatel\\ReturnEligibility\\Model\\Resolver\\ReturnEligibilityText") @doc(description: "Get formatted return eligibility text for a product")
 }
